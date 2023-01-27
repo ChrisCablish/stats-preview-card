@@ -1,6 +1,20 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    /*PRIMARY COLORS*/    
+    --veryDarkBlueMain: hsl(233, 47%, 7%);
+    --darkDesaturatedBlueCard: hsl(244, 38%, 16%);
+    --softVioletAccent: hsl(277, 64%, 61%);
+    /*NUETRAL COLORS*/
+    --whiteHeadingStats: hsl(0, 0%, 100%);
+    --SlightlyTransparentWhitePragraph:hsla(0, 0%, 100%, 0.75);
+    --SlightlyTransparentWhiteStatHeadings:hsla(0, 0%, 100%, 0.6);
+
+
 }
 
 body {
@@ -8,29 +22,62 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: hsl(233, 47%, 7%);
+   
+    background-color: var(--veryDarkBlueMain);
 }
 
 main {
     display: flex;
     width: 1080px;
-    background-color: hsl(244, 38%, 16%);
+    background-color: var(--darkDesaturatedBlueCard);
     color: white;
+    position: relative;
+}
+
+span.insights {
+    color: var(--softVioletAccent)
 }
 
 .information {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 50px;
+    
+}
+
+.information h1 {
+    color: var(--whiteHeadingStats);
+}
+
+.information p {
+    color: var(--SlightlyTransparentWhitePragraph);
+}
+
+div.violetfilter {
+    background-color: var(--softVioletAccent);
+    width: 540px;
+    height: 446px;
+    position: absolute;
+    right: 0;
     
 }
 
 img {
-    width: 30%
     height: auto;
+    z-index: 1;
+    opacity: 0.3;
 }
 
 .statistics-container {
     display: flex;
     justify-content: space-around;
+}
+
+div h2 {
+    color: var(--whiteHeadingStats);
+}
+
+div span {
+    color: var(----SlightlyTransparentWhiteStatHeadings);
 }
